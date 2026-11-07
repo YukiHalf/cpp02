@@ -6,7 +6,7 @@
 class Fixed
 {
 private:
-	int *m_num;
+	int m_num;
 	static const int m_bits = 8;
 public:
 	Fixed();
