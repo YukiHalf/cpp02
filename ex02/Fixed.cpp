@@ -68,14 +68,14 @@ Fixed Fixed::operator-(const Fixed& other) const
 Fixed Fixed::operator*(const Fixed& other) const
 {
 	Fixed result;
-	result.setRawBits(this->m_num * other.m_num);
+	result.setRawBits((this->m_num/pow(2,m_bits) )* other.m_num);
 	return result;
 }
 
 Fixed Fixed::operator/(const Fixed& other) const
 {
 	Fixed result;
-	result.setRawBits(this->m_num / other.m_num);
+	result.setRawBits((this->m_num/pow(2,m_bits)) / other.m_num);
 	return result;
 }
 
